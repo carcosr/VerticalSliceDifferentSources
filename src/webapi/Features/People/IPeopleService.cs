@@ -1,4 +1,5 @@
 ﻿using Domain;
+
 namespace webapi.Features.People;
 
 public interface IPeopleService

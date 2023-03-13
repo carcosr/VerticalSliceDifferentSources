@@ -10,6 +10,12 @@ public class Seed
       Name = "PacoPepe"
     });
 
+    context.Employees.Add(new Domain.Employee
+    {
+      Id = 1,
+      PersonId = 1
+    });
+
     context.SaveChanges();
   }
 }
