@@ -37,6 +37,9 @@ public class GoodMorning
       }
 
       var person = await _serviceManager.People.GetPersonByIdAsync(employee.PersonId);
+
+      //Este valor se debería obtener del SourceOneService.TellMeSomething()
+      //lo harcodeo para prueba.
       var message = "este es el mensaje de hoy";
 
       var result = new GoodMorningResult
