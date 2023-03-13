@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
+using webapi.Data.SourceOne;
 using webapi.Data.SQL;
 
 namespace webapi.Extensions;
@@ -18,6 +19,7 @@ public static class ServiceExtensions
         .ConfigureWarnings(builder => builder.Ignore(InMemoryEventId.TransactionIgnoredWarning));
     });
 
+    services.AddScoped<ISourceOneService, SourceOneService>();
     services.AddScoped<ServiceManager.IServiceManager, ServiceManager.ServiceManager>();
 
   }
